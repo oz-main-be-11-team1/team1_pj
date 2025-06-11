@@ -1,0 +1,17 @@
+#플라스크
+flask==3.1.0
+
+# 데이터베이스 관련 라이브러리
+pymysql==1.1.1
+sqlalchemy==2.0.37
+flask-sqlalchemy==3.1.1
+flask-migrate==4.0.7
+flask-smorest==0.45.0
+cryptography==45.0.3
+
+# 데이터 통신 관련 라이브러리
+gunicorn==23.0.0
+
+# 코드 수정 라이브러리
+black
+isort
