@@ -9,6 +9,7 @@ flask-migrate==4.0.7
 flask-smorest==0.45.0
 cryptography==45.0.3
 
+
 # 데이터 통신 관련 라이브러리
 gunicorn==23.0.0
 
