@@ -38,4 +38,4 @@ def create_image():
     db.session.commit()
 
     # 성공 메시지 반환
-    return jsonify({"message": f"ID: {new_image.id} Image Success Create"})
+    return jsonify({"message": f"{new_image.id}가 등록되었습니다 "}), 201

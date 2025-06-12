@@ -19,5 +19,5 @@ def create_choice():
     db.session.add(choice)
     db.session.commit()
     return jsonify({
-        'message': 'Content: 새로운 선택지 choice Success Create'
+        'message': '새로운 선택지가 성공적으로 생성되었습니다',
     }), 201

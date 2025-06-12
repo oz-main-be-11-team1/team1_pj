@@ -22,15 +22,6 @@ class Answer(CommonModel):
     user = db.relationship('Users', back_populates='answers')
     choice = db.relationship('Choices', back_populates='answers')
 
-    def to_dict(self):
-        return {
-            'id': self.id,
-            'user_id': self.user_id,
-            'choice_id': self.choice_id,
-            'user': self.user.name if self.user else None,
-            'choice': self.choice.content if self.choice else None,
-        }
-
 class Choices(CommonModel):
     __tablename__ = 'choices'
     id = db.Column(db.Integer, primary_key=True)
@@ -43,6 +34,15 @@ class Choices(CommonModel):
 
     question = db.relationship('Question', back_populates='choices')
     answers = db.relationship('Answer', back_populates='choice')
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'question_id': self.question_id,
+            'content': self.content,
+            'sqe': self.sqe,
+            'is_active': self.is_active,
+        }
 
 class Users(CommonModel):
     __tablename__ = 'users'
