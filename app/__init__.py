@@ -14,10 +14,9 @@ def create_app():
     application = Flask(__name__)
 
     application.config.from_object("config.Config")
-    # application.secret_key = "oz_form_secret"
+    application.secret_key = "oz_form_secret"
 
     db.init_app(application)
-
     migrate.init_app(application, db)
 
 # 400 에러 발생 시, JSON 형태로 응답 반환
