@@ -76,10 +76,10 @@ $ flask db upgrade
 | choice        |||
 | `POST`        | `/choice`                            | 선택지 생성                        |
 | images        |                                      |                               |
-| `POST`         | `/images`                            | 이미지 업로드                       |
+| `POST`        | `/images`                            | 이미지 업로드                       |
 | `GET`         | `/main`                              | 메인 이미지 조회                     |
-| status_routes|||
-|' `GET`         | `/stats/answer_rate_by_choice`       | 사용 중인 유저의 각 질문당 선택지 선택 비율 |
+| status_routes |||
+|  `GET`        | `/stats/answer_rate_by_choice`       | 사용 중인 유저의 각 질문당 선택지 선택 비율 |
 | `GET`         | `/stats/answer_count_by_question`    | 모든 질문에 대해 각 선택지의 선택 횟수 및 비율      |
 
 ## 📂 디렉토리 구조
