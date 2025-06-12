@@ -67,19 +67,18 @@ $ flask db upgrade
 |:--------------|:-------------------------------------|:------------------------------|
 | **Accounts**  |                                      |                               |
 | `POST`        | `/signup`                            | 회원가입                          |
- | 
 | **questions** |                                      |                               |
 | `GET`         | `/questions/count`                   | 전체 질문 갯수 가져오기                 |
 | `GET`         | `/questions/<int:question_id>`       | 특정 질문 가져오기                    |
 | `POST`        | ` /question`                         | 새 질문 작성                       
 | **Answer**    |                                      |                               |
 | `GET`         | `/submit`                            | 답변 저장                         |
-| choice        |
+| choice        |||
 | `POST`        | `/choice`                            | 선택지 생성                        |
 | images        |                                      |                               |
 | `POST`         | `/images`                            | 이미지 업로드                       |
 | `GET`         | `/main`                              | 메인 이미지 조회                     |
-| status_routes|
+| status_routes|||
 |' `GET`         | `/stats/answer_rate_by_choice`       | 사용 중인 유저의 각 질문당 선택지 선택 비율 |
 | `GET`         | `/stats/answer_count_by_question`    | 모든 질문에 대해 각 선택지의 선택 횟수 및 비율      |
 
