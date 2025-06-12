@@ -7,3 +7,9 @@ from .images import images_blp
 
 
 def register_routes(application):
+    application.register_blueprint(answers_blp)
+    application.register_blueprint(choices_blp)
+    application.register_blueprint(questions_blp)
+    application.register_blueprint(stats_routes_blp)
+    application.register_blueprint(user_blp)
+    application.register_blueprint(images_blp)
