@@ -34,7 +34,7 @@ echo "==== Starting Migration ===="
 echo
 
 # Flask 마이그레이션 작업
-flask db init
+#flask db init
 flask db migrate
 flask db upgrade
 
