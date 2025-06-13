@@ -8,16 +8,18 @@ answers_blp = Blueprint("answers", __name__)
 
 @answers_blp.route("/submit", methods=["POST"])
 def submit_answer():
-    data = request.get_json()
-    if not all(k in data for k in ["user_id", "choice_id"]):
-        return jsonify({"error": "존재하지 않는 필드입니다"}), 400
+        try:
+            for data in request.get_json():
+                answer = Answer(
+                    user_id=data["user_id"],
+                    choice_id=data["choice_id"],
+                )
+                db.session.add(answer)
+            db.session.commit()
+            user_id = request.get_json()[0]["user_id"]
+            return jsonify(
+                {"message": f"User: {user_id}'s answers Success Create"}
+            ), 201
 
-    answer = Answer(
-        user_id=data["user_id"],
-        choice_id=data["choice_id"]
-    )
-
-    db.session.add(answer)
-    db.session.commit()
-
-    return jsonify({"message": "답변이 정상적으로 등록 되었습니다"}), 201
+        except KeyError as e:
+            return jsonify({"message": f"Missing required field: {str(e)}"}), 400
