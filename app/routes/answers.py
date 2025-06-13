@@ -3,10 +3,10 @@ from flask import request, Blueprint, jsonify
 from app.models import Answer
 from config import db
 
-answers_blp = Blueprint("answers", __name__)
+answers_blp = Blueprint("answers", __name__, url_prefix="/submit")
 
 
-@answers_blp.route("/submit", methods=["POST"])
+@answers_blp.route("", methods=["POST"])
 def submit_answer():
         try:
             for data in request.get_json():
