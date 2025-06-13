@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "==== Restarting Nginx ===="
 echo
 
