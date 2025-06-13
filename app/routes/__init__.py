@@ -3,7 +3,7 @@ from .choices import choices_blp
 from .questions import questions_blp
 from .stats_routes import stats_routes_blp
 from .users import user_blp
-from .images import images_bp
+from .images import images_blp
 
 def register_routes(application):
     application.register_blueprint(answers_blp)
@@ -11,5 +11,5 @@ def register_routes(application):
     application.register_blueprint(questions_blp)
     application.register_blueprint(stats_routes_blp)
     application.register_blueprint(user_blp)
-    application.register_blueprint(images_bp)
+    application.register_blueprint(images_blp)
 
